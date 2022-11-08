@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calc.css">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&#038;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link  rel="stylesheet" href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" >
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="shortcut icon" type="x-icon" href="istockphoto-1203960441-612x612.jpg">
+
+
+</head>
+<body>
+      <!-- Start Header -->
+      <div class="header" id="header">
+        <div class="container">
+          <a href="#" class="logo">
+            <img src="download.jpg" width="40px" height="40px" alt="Logo" />
+          </a>       
+          <ul class="main-nav">
+            <li><a href="index.html" target="_blank">Home</a></li>
+            <li><a href="calc.html" target="_blank">Calculator</a></li>
+            <li><a href="reduce.html" target="_blank">Reduce co2</a></li>
+          </ul>
+        </div>
+        </div>
+      </div>
+      <!-- End Header -->
+      <!-- Start Landing -->
+      <div class="landing">
+        <div class="container">
+          <div class="text">
+            <h1>Welcome To our carbon footprint world </h1>
+            <p>Here Iam gonna share everything about carbon footprint,how to calculate your carbon emissions and how to reduce your carbon emissions</p>
+          </div>
+          <div class="image">
+            <img src="istockphoto-1371910917-612x612.jpg" alt="" />
+          </div>
+        </div>
+       
+      </div>
+      <!-- End Landing -->  
+      <!--start body-->
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+            <div id="form">
+              <form>
+                <h3 id="home-energy-label"><i class="fa fa-home" aria-hidden="true"></i> Home Energy</h3>	
+                <div class="form-group">
+                  <label for="electric">Monthly electric bill</label>
+                  <div class="input-group">
+                    <div class="input-group-addon">₹</div>
+                    <input class="form-control" id="electric" type="number" min="0" step="0.01">
+                  </div>
+                  <span class="help-block">Enter 0 if not applicable. If left blank, will default to 0.</span>
+                </div>
+                <div class="form-group">
+                  <label for="gas">Monthly natural gas bill</label>
+                  <div class="input-group">
+                    <div class="input-group-addon">₹</div>
+                    <input class="form-control" id="gas" type="number" min="0" step="0.01">
+                  </div>
+                  <span class="help-block">Enter 0 if not applicable. If left blank, will default to 0.</span>
+                </div>
+                <div class="form-group">
+                  <label for="oil">Monthly oil bil</label>
+                  <p><i>Somes homes use oil as a fuel source for heating furnances or boilers, and is often abbreviated as HHO.</i></p>
+                  <div class="input-group">
+                    <div class="input-group-addon">₹</div>
+                    <input class="form-control" id="oil" type="number" min="0" step="0.01">
+                  </div>
+                  <span class="help-block">Enter 0 if not applicable. If left blank, will default to 0.</span>
+                </div>
+                <br/>
+                <h3 class="form-section-label" id="travel-label"><i class="fa fa-globe" aria-hidden="true"></i> Travel</h3>
+                <div class="form-group">
+                  <label for="car">Annual miles driven on your car</label>
+                  <input class="form-control" id="car" type="number" min="0" step="1">
+                  <span class="help-block">Enter 0 if not applicable. If left blank, will default to 0.</span>
+                </div>
+                <div class="form-group">
+                  <label for="flights-4-less">Number of flights taken in the past year (4 hours or less)</label>
+                  <input class="form-control" id="flights-4-less" type="number" min="0" step="1">
+                  <span class="help-block">Enter 0 if not applicable. If left blank, will default to 0.</span>
+                </div>
+                <div class="form-group">
+                  <label for="flights-4-more">Number of flights taken in the past year (4 hours or more)</label>
+                  <input class="form-control" id="flights-4-more" type="number" min="0" step="1">
+                  <span class="help-block">Enter 0 if not applicable. If left blank, will default to 0.</span>
+                </div>
+                <br/>
+                <h3 class="form-section-label" id="waste-label"><i class="fa fa-recycle" aria-hidden="true"></i> Waste</h3>
+                <div class="form-group">
+                  <label>Do you recycle newspaper?</label>
+                  <div class="alert alert-danger" role="alert" id="newspaper-alert"><strong>Oops!</strong> You need to make a selection.</div>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="newspaperOptionsRadios" id="optionsRadio1" value="option1">
+                      Yes
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="newspaperOptionsRadios" id="optionsRadio2" value="option2">
+                      No
+                    </label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>Do you recycle aluminum and tin?</label>
+                  <div class="alert alert-danger" role="alert" id="alum-tin-alert"><strong>Oops!</strong> You need to make a selection.</div>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="alumtinOptionsRadios" id="optionsRadio3" value="option3">
+                      Yes
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="alumtinOptionsRadios" id="optionsRadio4" value="option4">
+                      No
+                    </label>
+                  </div>
+                </div>
+                <br/>
+                <button id="calculate-btn" type="button" class="btn btn-success btn-lg btn-block">Calculate</button>
+              </form>
+            </div>
+
+    
+            <div id="results" class="text-center">
+              <h1 class="score">your score is <h1 id="score"></h1></h1>
+              <br/>
+              <p class="lead">This number represents the amount of greenhouse gases in units of carbon dioxide you emit per year</p>
+              <br/>
+              <h5 class="bg-success score-info">438,000 or below is EXCELLENT</h5>
+              <h5 class="bg-info score-info">438,000 to 1,167,927 is GOOD</h5>
+              <h5 class="bg-warning score-info">1,167,927 to 1,606,000 is AVERAGE</h5>
+              <h5 class="bg-danger score-info">1,606,000 or above is BAD</h5>
+              <br/>
+              <br/>
+              <br/>
+              <button id="recalculate-btn" type="button" class="btn btn-success btn-lg btn-block">Recalculate</button>
+    
+               <table class="calcgraph"><tbody>
+               <tr class="calcgraph"></tr>
+        
+        <ul>
+        <li class="resultsbullets">The average for the European Union is about 6.4 metric tons</li>
+        <li class="resultsbullets">The average worldwide carbon footprint is about 5 metric tons</li>
+        <li class="resultsbullets">The worldwide target to combat climate change is 2 metric tons</li>
+        </ul>
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4"></div>
+          
+      
+    
+      
+    
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <!-- Latest compiled and minified JavaScript -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+      <script src="calc.js" type="text/javascript"></script>
+      <!--end body-->
+
+ <!--start content-->
+  <div class="contact">
+    <div class="container">
+      <h2 class="special-heading"></h2>
+      <div class="info">
+          <a href="https://www.gu.edu.eg/" class="link">GalalaUniversity</a>
+        </div>
+      </div>
+    </div>
+  <!--end content-->
+  <!--start footer-->
+  <div class="footer">
+    &copy; 2022 <span style="color:rgb(35, 194, 35);">GU</span>
+    all right reserved 
+  </div>
+  <!--end footer-->
+
+</body>
+</html>
